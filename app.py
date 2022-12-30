@@ -8,7 +8,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return "<p>Hello, World!</p>"
+    port =os.getenv('APP_SERVER_PORT')
+    return f'<p><a href="tv">TV</a></p> \
+        <a href="movies">Movies</a>'
 
 
 @app.route("/influx")
